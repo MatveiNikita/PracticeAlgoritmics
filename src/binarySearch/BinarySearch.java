@@ -9,7 +9,7 @@ public class BinarySearch {
         System.out.println(binarySearch(x,67));
 
     }
-    static int binarySearch(int [] sortedArray, int element){
+    static int binarySearch(int [] sortedArray, int element){ // The Complexity of this algorithm is O(log(N))
 
         int left = 0; // set left border
         int right =sortedArray.length-1; // set right border
@@ -25,6 +25,6 @@ public class BinarySearch {
             }else{
                 right = middle-1; // otherwise move right border
             }
-        }return -1;
-    } // The Complexity of this algorithm is O(log(N))
+        }return -1; // if we didn't find element
+    }
 }
