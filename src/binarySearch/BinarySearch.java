@@ -7,6 +7,7 @@ public class BinarySearch {
         int[] x = new int[]{12,41452,4633,574,2,34,266,8979,5656,456,3458,989,56,4,432,67,858}; //example
         Arrays.sort(x); //it's very important
         System.out.println(binarySearch(x,67));
+        System.out.println(binarySearchRecursion(x,67,0,x.length-1));
 
     }
     static int binarySearch(int [] sortedArray, int element){ // The Complexity of this algorithm is O(log(N))
@@ -26,5 +27,19 @@ public class BinarySearch {
                 right = middle-1; // otherwise move right border
             }
         }return -1; // if we didn't find element
+    }
+    public static int binarySearchRecursion(int[] array, int target, int low, int high){ //The complexity with recursion
+        if(low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (target == array[mid]) {
+                return mid;
+            } else if (array[mid] < target) {
+                return binarySearchRecursion(array, target, mid + 1, high);
+            } else {
+                return binarySearchRecursion(array, target, low, high - 1);
+            }
+        }
+        return -1;
     }
 }
