@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PracticeAlgoritmics.iml" filepath="$PROJECT_DIR$/PracticeAlgoritmics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticeAlgorithms.iml" filepath="$PROJECT_DIR$/PracticeAlgorithms.iml" />
     </modules>
   </component>
 </project>
